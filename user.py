@@ -18,18 +18,18 @@ class User:
 
     @email.setter
     def email(self, new_email):
-        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'  #regular expression - wzorzec  do wykrywania bledow
         if not re.match(regex, new_email):
             raise ValueError('f Incorrect email address: {new_email}')
         self._email = new_email
 
     def __str__(self):
-        return f'{type(self).__name__}: {self.first_name}, {self.last_name}, {self.email}'
+        return f'{self.name}'
 
 
-u = User("Andrzej", "L", "aa.pl")
-print(u.name)
-u.first_name = "Janusz"
-print(u.name)
-print(u)
+u = User("Andrzej", "L", "a@a.pl")
+# print(u.name)
+# u.first_name = "Janusz"
+# print(u.name)
+# print(u)
 # u.name = "elo"

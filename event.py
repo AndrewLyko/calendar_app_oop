@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 
+from user import User
+
 
 class Event:
     def __init__(self, title, start_date, duration, localization, owner):
@@ -29,14 +31,23 @@ class Event:
             raise ValueError(f'Event has to last more than 10 min: {value}')
         self._duration = value
 
+    @property
+    def owner(self):
+        return self._owner.name
+
+    @owner.setter
+    def owner(self, new_owner):
+        if not isinstance(new_owner, User):
+            raise TypeError(f"Incorrect user type: {new_owner}")
+        self._owner = new_owner
+
     def __str__(self):
         return f'{type(self).__name__}: title: {self.title}, start_date: {self.start_date},' \
-               f' duration: {self.duration}'
+               f' duration: {self.duration}, owner: {self.owner}'
 
     def __repr__(self):
         return f'{type(self).__name__}(title="{self.title}", start_date={self.start_date}, duration={self.duration},' \
                f' localization="{self.localization}", owner="{self.owner}")'
-
 
 # e = Event(title="browarek", start_date=datetime(2021, 7, 27), duration=50, localization="Krakow", owner="Andrzej")
 # e = Event(title="browarek", start_date=datetime(2021, 7, 27), duration=50, localization="Krakow", owner="Andrzej")
