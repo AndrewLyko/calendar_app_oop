@@ -27,7 +27,7 @@ class User:
         return f'{self.name}'
 
 
-u = User("Andrzej", "L", "a@a.pl")
+# u = User("Andrzej", "L", "a@a.pl")
 # print(u.name)
 # u.first_name = "Janusz"
 # print(u.name)
