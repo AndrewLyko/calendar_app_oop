@@ -47,7 +47,7 @@ class DataObj:
     #         for element in self.element_key_list:
     #             for key in element:
     #                 temp = []
-    #                 temp.append(self.data_obj[c_type][idx][key])
+    #                 temp.add_event(self.data_obj[c_type][idx][key])
     #                 idx += 1
     #                 return temp
 
