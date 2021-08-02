@@ -5,12 +5,6 @@ class Members:
     def __init__(self, members_list):
         self.members_list = members_list
 
-
-
-        # members_list = iter(new_members_list)  # <- to badziewie dla kolejnego elementu (next(members_list)
-
-
-
     def __str__(self):
         return f'{self.members_list}'
 

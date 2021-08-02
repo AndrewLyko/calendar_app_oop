@@ -20,7 +20,7 @@ class User:
     def email(self, new_email):
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'  #regular expression - wzorzec  do wykrywania bledow
         if not re.match(regex, new_email):
-            raise ValueError('f Incorrect email address: {new_email}')
+            raise ValueError(f'Incorrect email address: {new_email}')
         self._email = new_email
 
     def __str__(self):
