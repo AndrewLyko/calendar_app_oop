@@ -60,7 +60,7 @@ class GenerateData:
 #
 # a = GenerateData()
 # pp(a.load_data())
-# a.generate_data(30)
+# a.generate_data(6)
 
 
 #

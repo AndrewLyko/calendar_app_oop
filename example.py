@@ -125,15 +125,15 @@ class MyIterable:
     def __iter__(self):
         return MyBetterIterator(self.data)
 
+
 #
-x = MyIterable(data)
-# x.__iter__ = lambda self: MyBetterIteratorEx(self.data)
-for item in x:
-    print(item)
+# x = MyIterable(data)
+# # # # x.__iter__ = lambda self: MyBetterIteratorEx(self.data)
+# for item in x:
+#     print(item)
 # m = MyIterable(data)
 # n = iter(MyIterable(data))
 #
-# print(next(n))
 # print(next(n))
 # print(next(n))
 # print(next(n))

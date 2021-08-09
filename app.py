@@ -29,9 +29,14 @@ for workshop in data_1['workshops']:
     start_date = datetime.strptime(workshop['start_date'], '%Y-%m-%d %H:%M:%S.%f')
     m_list.add_event(Workshop(workshop['title'], start_date, int(workshop['duration']), workshop['localization'],
                               owner, trainer))
+#
+# pp(type(m_list))
+# pp(repr(m_list))
+#
+# for item in m_list:
+#     print(item)
 
-pp(str(m_list))
-pp(repr(m_list))
-
-for item in m_list:
-    print(item)
+# y = DurationIterator(m_list.events)
+#
+# for item in y:
+#     pp(item)
